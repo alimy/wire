@@ -8,16 +8,16 @@ type Arg struct {
 }
 
 type Wire interface {
-	NewWire(...Arg) (interface{}, error)
+	NewWire(...*Arg) (interface{}, error)
 }
 
 type Initializr interface {
 	Initializr() interface{}
 }
 
-type WireFunc func(...Arg) (interface{}, error)
+type WireFunc func(...*Arg) (interface{}, error)
 
-func (f WireFunc) NewWire(args ...Arg) (interface{}, error) {
+func (f WireFunc) NewWire(args ...*Arg) (interface{}, error) {
 	return f(args...)
 }
 
@@ -31,7 +31,7 @@ func Build(initializrs ...Initializr) {
 	// TODO
 }
 
-func Instance(target interface{}, args ...Arg) (interface{}, error) {
+func Instance(target interface{}, args ...*Arg) (interface{}, error) {
 	// TODO
 	return nil, errors.New("nothing")
 }

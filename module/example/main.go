@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/alimy/wire/core"
+	"github.com/alimy/wire/inject"
 	"github.com/alimy/wire/module/example/room"
 	"github.com/alimy/wire/module/example/wire"
 )
@@ -26,8 +26,8 @@ import (
 // InitializeEvent creates an Event. It will error if the Event is staffed with
 // a grumpy greeter.
 func InitializeEvent(phrase string) (room.Event, error) {
-	core.Build(&wire.RoomWire{})
-	if obj, err := core.Instance(&room.Event{}, &core.Arg{Name: "phrase", Value: phrase}); err == nil {
+	inject.Build(&wire.RoomWire{})
+	if obj, err := inject.Instance(&room.Event{}, &inject.Arg{Name: "phrase", Value: phrase}); err == nil {
 		if event, ok := obj.(room.Event); ok {
 			return event, nil
 		}

@@ -1,2 +1,2 @@
-github.com/alimy/wire/core v0.0.0-20181228080514-02c57efae74e h1:ANyIeW4wFbKABt9OgxvZnIhth6zv664dfVoBUNKVE3w=
-github.com/alimy/wire/core v0.0.0-20181228080514-02c57efae74e/go.mod h1:RcE8d8xvlNWt/ubs0oyLHziqfiixSLdr9kh8ugkPnGs=
+github.com/alimy/wire/inject v0.0.0-20181228081757-8a78ca61c9e7 h1:x6rHgWCFfsr5RKMtiqvCpZ+akNs8IwUH1X6y9sw53hg=
+github.com/alimy/wire/inject v0.0.0-20181228081757-8a78ca61c9e7/go.mod h1:ACbQqAJNSI/noRlHUdWGqoHqllRrgVT9IMXcHOrtB3E=

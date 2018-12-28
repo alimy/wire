@@ -4,7 +4,7 @@ package wire
 
 import (
 	"errors"
-	. "github.com/alimy/wire/core"
+	. "github.com/alimy/wire/inject"
 	"github.com/alimy/wire/module/example/room"
 	"time"
 )

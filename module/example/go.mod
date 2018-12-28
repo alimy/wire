@@ -1,3 +1,3 @@
 module github.com/alimy/wire/module/example
 
-require github.com/alimy/wire/core v0.0.0-20181228080514-02c57efae74e
+require github.com/alimy/wire/inject v0.0.0-20181228081757-8a78ca61c9e7

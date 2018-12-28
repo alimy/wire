@@ -30,7 +30,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/google/wire/internal/wire"
+	"github.com/alimy/wire/internal/wire"
 	"github.com/pmezard/go-difflib/difflib"
 	"golang.org/x/tools/go/types/typeutil"
 )

@@ -1,17 +1,19 @@
 package core
 
+type Args map[string]interface{}
+
 type Wire interface {
-	NewWire() interface{}
+	NewWire(Args) interface{}
 }
 
 type Initializr interface {
 	Initializr() interface{}
 }
 
-type WireFunc func() interface{}
+type WireFunc func(Args) interface{}
 
-func (f WireFunc) NewWire() interface{} {
-	return f()
+func (f WireFunc) NewWire(args Args) interface{} {
+	return f(args)
 }
 
 func Build(initializrs ...Initializr) {

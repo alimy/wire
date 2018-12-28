@@ -3,16 +3,16 @@ package core
 type Args map[string]interface{}
 
 type Wire interface {
-	NewWire(Args) interface{}
+	NewWire(Args) (interface{}, error)
 }
 
 type Initializr interface {
 	Initializr() interface{}
 }
 
-type WireFunc func(Args) interface{}
+type WireFunc func(Args) (interface{}, error)
 
-func (f WireFunc) NewWire(args Args) interface{} {
+func (f WireFunc) NewWire(args Args) (interface{},error) {
 	return f(args)
 }
 

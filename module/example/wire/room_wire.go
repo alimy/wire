@@ -41,7 +41,7 @@ func (w *RoomWire) event(args ...*Arg) (interface{}, error) {
 	return &room.Event{Greeter: g}, nil
 }
 
-func (w *RoomWire) Initializr() interface{} {
+func (w *RoomWire) InjectOf() interface{} {
 	w.Message = WireFunc(w.message)
 	w.Greeter = WireFunc(w.greeter)
 	w.Event = WireFunc(w.event)
